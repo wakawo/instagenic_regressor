@@ -1,0 +1,3 @@
+[submodule "instagenic_regressor/neural-image-assessment"]
+	path = instagenic_regressor/neural-image-assessment
+	url = https://github.com/titu1994/neural-image-assessment.git
