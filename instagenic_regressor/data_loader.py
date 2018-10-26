@@ -16,7 +16,7 @@ import tensorflow as tf
 # In[13]:
 
 
-base_image_path = '../../annotation_tools/images/omelette_rice_500/images/'
+base_image_path = '../images/omelette_rice_500/images/'
 
 IMAGE_SIZE = 224
 
@@ -27,7 +27,6 @@ with open('./pickle/score_list.pickle', 'rb') as f:
     
 train_image_paths = [base_image_path + name for name in [files]]
 train_image_paths = np.array(train_image_paths).reshape(-1)
-train_scores = np.array(train_scores, dtype='float32').reshape(-1)
 
 val_image_paths = train_image_paths[-50:]
 val_scores = train_scores[-50:]
@@ -37,7 +36,6 @@ train_scores = train_scores[:-50]
 print('Train set size : ', train_image_paths.shape, train_scores.shape)
 print('Val set size : ', val_image_paths.shape, val_scores.shape)
 print('Train and validation datasets ready !')
-
 
 # In[ ]:
 
